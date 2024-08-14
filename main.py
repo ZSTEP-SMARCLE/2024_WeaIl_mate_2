@@ -149,13 +149,15 @@ st.logo("./img/logo.png", link=None, icon_image=None)
 if st.session_state.page == 'main':
     with st.container(height=100, border=0):
         st.empty()
-    st.image("./img/ment.png", width=700)
+    #st.image("./img/ment.png", width=700)
+    st.subheader("장애인에게 필요한 학습 컨텐츠를 쉽고 간편하게 제공합니다.")
     #st.subheader("장애 아동에게 꼭 필요한 학습 컨텐츠를 쉽고 간편하게 제공합니다.")
     if st.button("컨텐츠 추천받기"):
         print("챗봇으로 넘어가기")
         switch_page("search")
     
-    st.image("./img/physical.png", width=330)
+    #st.image("./img/physical.png", width=330)
+    st.markdown("몸이 불편한 분들을 위한 추천 컨텐츠")
     #st.subheader("몸이 불편한 아동을 위한 추천 컨텐츠")
     with st.expander("", expanded=1):
         psc=st.columns(6)
@@ -164,7 +166,8 @@ if st.session_state.page == 'main':
                 st.image(thumbnail_physical[i])
                 if st.button("영상 보기", key=i+1, use_container_width=1):
                     movie(youtube_physical[i])
-    st.image("./img/mental.png", width=360)
+    #st.image("./img/mental.png", width=360)
+    st.markdown("마음이 불편한 분들을 위한 추천 컨텐츠")
     #st.subheader("마음이 불편한 아동을 위한 추천 컨텐츠")
     with st.expander("",expanded=1):
         mtl=st.columns(6)
